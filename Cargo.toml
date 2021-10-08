@@ -1,0 +1,13 @@
+[package]
+name = "substate"
+authors = ['Gabriel Facco de Arruda <https://github.com/arrudagates>']
+version = "0.1.0"
+edition = "2018"
+
+
+[dependencies]
+sp-core = { git = "https://github.com/paritytech/substrate.git", tag = "monthly-2021-09+1", default-features = false, features = ["full_crypto"] }
+hex = "0.4.3"
+codec = { package = 'parity-scale-codec', version = "2.0.0", default-features = false,  features = ['derive']}
+base58 = "0.2.0"
+blake2-rfc = "0.2.18"
