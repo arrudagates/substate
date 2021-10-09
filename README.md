@@ -12,7 +12,7 @@ storage_key!("Session", "Validators");
 storage_key!(
     "Staking",
     "ErasRewardPoints",
-    (StorageHasher::Twox64Concat, self.current_era)
+    (StorageHasher::Twox64Concat, 10)
 );
 // -> 0x5f3e4907f716ac89b6347d15ececedca80cc6574281671b299c1727d7ac68cabef8763d79d01484e0c000000
 
@@ -20,8 +20,8 @@ storage_key!(
 storage_key!(
     "ImOnline",
     "AuthoredBlocks",
-    (StorageHasher::Twox64Concat, self.current_session),
-    (StorageHasher::Twox64Concat, self.account)
+    (StorageHasher::Twox64Concat, 68),
+    (StorageHasher::Twox64Concat, address_to_accountid("esqyGXvN7eezFoGtXAiLvXNnai2KFWkt7VfWwywHNBdwb8dUh").unwrap().0)
 );
 // -> 0x2b06af9719ac64d755623cda8ddd9b94b1c371ded9e9c565e89ba783c4d5f5f94e9f0caa17b4771b4b000000e669931fb1d70de1e63bad33d41d23e049d4f9efea39e4f44426b3f82104800ef6a9f29fbaa18667
 ```
