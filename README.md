@@ -33,3 +33,7 @@ let (accountid: AccountId32, format: Ss58AddressFormat) = address_to_accountid("
 
 let account: String = accountid_to_address(accountid, format);
 ```
+
+## Credit
+
+The helper functions used in this library were adapted from [Substrate](https://github.com/paritytech/substrate) and [substrate-api-client](https://github.com/scs/substrate-api-client) to work on a no-std/wasm environment and used inside the main macro 
